@@ -4,6 +4,10 @@ import Link from 'next/link'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 function PortfolioItems({project}) {
+  const d = new Date(project.fields.projectDate);
+  let year = d.getUTCFullYear();
+  let month = d.getUTCMonth();
+  console.log(month);
   useEffect(() => {
     // Client-side-only code
     AOS.init();

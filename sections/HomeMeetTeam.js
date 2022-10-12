@@ -15,6 +15,9 @@ export default function HomeMeetTeam() {
       <Image
             src={teamBg}
             alt="Arch Studio team"
+            height={560}
+            width={1110}
+            layout="raw"
         />
     </div>
   )

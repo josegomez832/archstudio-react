@@ -9,25 +9,17 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { AiOutlineArrowRight } from "react-icons/ai"
 import dynamic from 'next/dynamic'
 
-const MapContainer = dynamic(() => import('react-leaflet'), {
-  ssr: false,
-})
-const TileLayer = dynamic(() => import('react-leaflet'), {
-    ssr: false,
-  })
-  const Marker = dynamic(() => import('react-leaflet'), {
-    ssr: false,
-  })
-  const Popup = dynamic(() => import('react-leaflet'), {
-    ssr: false,
-  })
+
+const Map = dynamic(() => import('/components/Map'), {
+    ssr: false
+  });
 function Contact() {
     useEffect(() => {
         // Client-side-only code
         AOS.init();
-        const position = [51.505, -0.09];
+        
       },[]);
-
+      
       // Handles the submit event on form submit.
   const handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
@@ -69,9 +61,7 @@ function Contact() {
   return (
     <div>
         <Head>
-                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
-        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
-        crossorigin=""/>
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossOrigin=""/>
         </Head>
         <Navigation />
         <div className='container section about-intro' data-aos="fade-right" data-aos-mirror="true" data-aos-offset="300"
@@ -103,24 +93,27 @@ function Contact() {
                 <div className='col-4'>
                     <p><strong>OfficeOne</strong></p>
                     <p>Mail :archone@mail.com<br />
-                        Address:1892  Chenoweth Drive TN<br />
+                        Address: 2409 University Ave,<br />
+Austin, TX 78712<br />
                         Phone: 123-456-3451</p>
                 </div>
                 <div className='col-4'>
                     <p><strong>OfficeOne</strong></p>
                     <p>Mail :archone@mail.com<br />
-                        Address:1892  Chenoweth Drive TN<br />
+                        Address: 4800 Calhoun Rd,<br/>
+Houston, TX 77004<br/>
                         Phone: 123-456-3451</p>
+                </div>
+            </div>
+            <div className='row'>
+                <div className='col-12'>
+                    <Map />
                 </div>
             </div>
         </div>
         <div className='container section map-container' data-aos="fade-right" data-aos-mirror="true" data-aos-offset="300"
      data-aos-easing="ease-in-sine">
-            <div className='row'>
-                <div className='col-12'>
-                
-                </div>
-            </div>
+            
         </div>
         <div className='container section form-container' data-aos="fade-left" data-aos-mirror="true" data-aos-offset="300"
      data-aos-easing="ease-in-sine">

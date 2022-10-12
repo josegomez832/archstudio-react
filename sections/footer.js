@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import { links } from '../utils/constants'
-import Link from 'next/link';
-import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from 'next/link'
+import { AiOutlineArrowRight } from "react-icons/ai"
 
-function footer() {
+export default function footer() {
     return (
         <div className='footer container'>
             <div className='footer-inner'>
@@ -33,5 +33,3 @@ function footer() {
         </div>
     )
 }
-
-export default footer

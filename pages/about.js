@@ -50,7 +50,7 @@ export default function About() {
 
                     <p>Our small team of world-class professionals provides input on every project.</p>
                 </div>
-                <div className='col-6'>
+                <div className='col-6 hidden-md'>
                     <Image
                         src="/our-heritage.jpg"
                         alt="Our Heritage image block"
