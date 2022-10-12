@@ -1,10 +1,10 @@
 import React from 'react'
 import { createClient,contentful } from 'contentful'
 import styles from '../styles/Home.module.css'
-import Navigation from '../sections/Header'
+import Navigation from '../components/Header'
 import AOS from 'aos';
-import PortfolioItems from '../sections/PortfolioItems'
-import Footer from '../sections/footer';
+import PortfolioItems from '../components/PortfolioItems'
+import Footer from '../components/footer';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 export async function getStaticProps() {
   
