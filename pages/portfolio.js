@@ -1,7 +1,7 @@
 import React from 'react'
 import { createClient,contentful } from 'contentful'
 import styles from '../styles/Home.module.css'
-import Navigation from '/sections/Header'
+import Navigation from '../sections/Header'
 import AOS from 'aos';
 import PortfolioItems from '../sections/PortfolioItems'
 import Footer from '../sections/footer';
