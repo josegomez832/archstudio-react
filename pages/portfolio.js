@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import Navigation from '../components/Header'
 import AOS from 'aos';
 import PortfolioItems from '../components/PortfolioItems'
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 export async function getStaticProps() {
   
